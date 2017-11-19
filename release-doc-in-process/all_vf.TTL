@@ -339,17 +339,17 @@ vf:object  a         owl:ObjectProperty ;
         rdfs:range   foaf:Agent ;
         rdfs:comment        "The object of a relationship between 2 agents." .
 
-vf:context  a        owl:ObjectProperty ;
-        rdfs:domain  vf:AgentRelationship ;
-        rdfs:label   "context" ;
-        rdfs:range   foaf:Agent ;
-        rdfs:comment        "The larger context of a relationship between 2 agents, used where the relationship is not relevant outside of that context." .
+#vf:context  a        owl:ObjectProperty ;
+#        rdfs:domain  vf:AgentRelationship ;
+#        rdfs:label   "context" ;
+#        rdfs:range   foaf:Agent ;
+#        rdfs:comment        "The larger context of a relationship between 2 agents, used where the relationship is not relevant outside of that context." .
 
 vf:scope  a          owl:ObjectProperty ;
-        rdfs:domain  [ owl:unionOf (vf:EconomicEvent vf:Commitment) ] ;
+        rdfs:domain  [ owl:unionOf (vf:EconomicEvent vf:Commitment vf:AgentRelationship) ] ;
         rdfs:label   "scope" ;
         rdfs:range   owl:Thing ;
-        rdfs:comment        "The larger boundary or context, used for accounting, planning, distributing income." .
+        rdfs:comment        "The larger boundary or context, used for accounting, planning, distributing income, reporting, etc." .
 
 #vf:committedScope  a        owl:ObjectProperty ;
 #        rdfs:domain  vf:Commitment ;
